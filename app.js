@@ -6,10 +6,7 @@ var fs = require('fs');
 var config = require('./test.json');
 var axios = require('axios');
 
-
 app.get('/', function (req, res) {
-    //res.setHeader('Content-Type', 'application/json');
-    //res.end(config);
     const response = [];
     try {
         const data = config.hits.hits;
@@ -35,13 +32,13 @@ app.get('/', function (req, res) {
                         console.log("error en la inserción");
                         console.log(error);
                         //console.log(error);
-                    });               
+                    });
 
             } catch (error) {
                 //console.log(error);
                 console.log("ocurrió un error");
             }
-            
+
             //response.push(element._source);
             auto++;
         });
@@ -52,7 +49,7 @@ app.get('/', function (req, res) {
         res.json(response);
         //console.log(error);
     }
-    
+
 });
 
 app.listen(3001, function () {
