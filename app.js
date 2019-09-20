@@ -4,8 +4,8 @@ var app = express();
 var fs = require('fs');
 //var obj = JSON.parse(fs.readFileSync('test.json', 'utf8'));
 var config = require('./test.json');
-var axios = require('axios');
 // var axios = require('axios');
+var axios = require('axios');
 
 app.get('/', function (req, res) {
     const response = [];
